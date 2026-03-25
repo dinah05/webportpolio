@@ -1,0 +1,104 @@
+.card {
+  display: flex;
+  width: 304px;
+  max-width: 510px;
+  padding: 16px 16px 20px 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  border-radius: 14px;
+  background: #FEFCFC;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.08);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+/* 이미지 */
+.card-image {
+  width: 100%;
+  height: 160px;
+  background: #d9d9d9;
+  border-radius: 10px;
+}
+
+/* 태그 */
+.tag-container {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.tag {
+  display: flex;
+  padding: 6px 8px;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 999px;
+  background: #F2F2F2;
+
+  font-size: 12px;
+  color: #595959;
+}
+
+/* 타이틀 */
+.title {
+  width: 100%;
+  margin: 0;
+
+  color: #000;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: -0.6px;
+}
+
+/* 설명 */
+.description {
+  align-self: stretch;
+  margin: 0;
+
+  color: #5A5A5A;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+/* 버튼 */
+.button {
+  display: flex;
+  padding: 8px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+
+  align-self: flex-end;
+
+  border-radius: 8px;
+  background: #FFF;
+  border: none;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.20);
+  cursor: pointer;
+
+  color: #000;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: -0.32px;
+}
+
+.button svg {
+  width: 14px;
+  height: 12px;
+}
