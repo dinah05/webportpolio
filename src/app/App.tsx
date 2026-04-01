@@ -1,7 +1,8 @@
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import AboutMe from "../components/AboutMe";
-import ProjectCard from "../components/ProjectCard";
+import ProfessionalJourney from "../components/ProfessionalJourney";
+import Project from "../components/Project";
 import Footer from "../components/Footer";
 
 function App() {
@@ -10,9 +11,8 @@ function App() {
       <Header />
       <Hero />
       <AboutMe />
-      <div style={{ padding: '40px' }}>
-        <ProjectCard />
-      </div>
+      <ProfessionalJourney />
+      <Project />
       <Footer />
     </div>
   )

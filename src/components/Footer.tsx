@@ -2,7 +2,8 @@ export default function Footer() {
   return (
     <footer style={{
       display: 'flex',
-      width: '1280px',
+      width: '100%',
+      maxWidth: '1280px',
       padding: '24px 86px',
       flexDirection: 'column',
       justifyContent: 'center',

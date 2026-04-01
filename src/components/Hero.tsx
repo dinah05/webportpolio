@@ -4,7 +4,8 @@ export default function Hero() {
   return (
     <section style={{
       display: 'flex',
-      width: '1280px',
+      width: '100%',
+      maxWidth: '1280px',
       height: '830px',
       paddingTop: '80px',
       flexDirection: 'column',

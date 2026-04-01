@@ -11,7 +11,8 @@ export default function AboutMe() {
 
   return (
     <section style={{
-      width: '1280px',
+      width: '100%',
+      maxWidth: '1280px',
       height: '1035px',
       margin: '0 auto',
       background: '#FAF9F9',

@@ -2,7 +2,8 @@ export default function Header() {
   return (
     <header style={{
       display: 'flex',
-      width: '1280px',
+      width: '100%',
+      maxWidth: '1280px',
       height: '72px',
       padding: '16px 32px',
       justifyContent: 'space-between',
