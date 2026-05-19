@@ -1,4 +1,3 @@
-import React from 'react'
 import "../components/ProjectCard.css";
 
 const ProjectCard = () => {

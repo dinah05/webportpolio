@@ -1,9 +1,9 @@
 import { useState } from 'react';
 
 const cards = [
-  { rotate: 'rotate(18.985deg)', zIndex: 1, label: '이미지1' },
-  { rotate: 'none',              zIndex: 2, label: '이미지2' },
-  { rotate: 'rotate(-14.829deg)',zIndex: 1, label: '이미지3' },
+  { label: '슬라이드1', rotate: 'rotate(-12deg)', zIndex: 1, left: 0   },
+  { label: '슬라이드2', rotate: 'rotate(-5deg)',  zIndex: 2, left: 65  },
+  { label: '슬라이드3', rotate: 'rotate(3deg)',   zIndex: 3, left: 130 },
 ];
 
 export default function AboutMe() {
@@ -92,12 +92,10 @@ export default function AboutMe() {
 
         {/* 카드 3장 */}
         <div style={{
-          width: '398px',
-          height: '258px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
+          width: '290px',
+          height: '250px',
           position: 'relative',
+          margin: '0 auto',
         }}>
           {cards.map((card, i) => (
             <div
@@ -105,35 +103,36 @@ export default function AboutMe() {
               onMouseEnter={() => setHovered(i)}
               onMouseLeave={() => setHovered(null)}
               style={{
-                width: '200px',
-                height: '258px',
+                width: '160px',
+                height: '210px',
                 padding: '8px',
-                flexDirection: 'column',
-                alignItems: 'flex-start',
-                gap: '8px',
                 borderRadius: '12px',
                 background: '#FFF',
-                boxShadow: '-6px 6px 15px 0 rgba(0,0,0,0.18)',
+                boxShadow: '4px 4px 16px 0 rgba(0,0,0,0.15)',
                 position: 'absolute',
-                left: `${i * 90}px`,
-                transform: hovered === i ? 'none' : card.rotate,
+                left: `${card.left}px`,
+                top: `${(2 - i) * 10}px`,
+                transform: hovered === i
+                  ? 'translateY(-12px) rotate(0deg)'
+                  : card.rotate,
+                transformOrigin: 'bottom center',
                 transition: 'transform 0.3s ease',
                 zIndex: hovered === i ? 10 : card.zIndex,
                 cursor: 'pointer',
                 display: 'flex',
+                flexDirection: 'column',
               }}
             >
-              {/* 이미지 자리 */}
               <div style={{
                 width: '100%',
                 flex: 1,
                 borderRadius: '8px',
                 background: '#E0E0E0',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: '#999',
-                fontSize: '12px',
+              }} />
+              <div style={{
+                padding: '6px 4px 2px',
+                fontSize: '11px',
+                color: '#555',
                 fontFamily: 'Pretendard, sans-serif',
               }}>
                 {card.label}
